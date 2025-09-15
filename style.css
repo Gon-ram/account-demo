@@ -1,0 +1,71 @@
+/* Reset mặc định cho đẹp */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Khung container */
+.container {
+  width: 320px;
+  padding: 20px;
+  background: #222;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  text-align: center;
+  color: #fff;
+}
+
+/* Tiêu đề */
+.container h2 {
+  margin-bottom: 20px;
+  color: #0ff;
+}
+
+/* Ô nhập */
+.container input {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+}
+
+/* Nút */
+.container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #0ff;
+  color: #000;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.container button:hover {
+  background: #00bcd4;
+  color: white;
+}
+
+/* Chuyển form */
+.toggle {
+  margin-top: 12px;
+  cursor: pointer;
+  color: #ff0;
+  font-size: 14px;
+}
+
