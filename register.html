@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="utf-8">
+        <title>Register</title>
+    </head>
+    <body>
+        <style>
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    height: 100vh;
+    background: #f8f7f7;
+    overflow: hidden;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  /* pseudo-element chứa pattern chữ 'errol' làm nền lặp */
+  body::before {
+    content: "";
+    position: absolute;
+    inset: -50%; /* mở rộng để khi animate không lộ mép */
+    pointer-events: none;
+    z-index: -1;
+
+    /* SVG data URL: lưu ý kí tự # phải encode thành %23 */
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='48'><text x='0' y='34' font-family='Arial, Helvetica, sans-serif' font-size='24' fill='%23f30303'>errol</text></svg>");
+
+    /* điều chỉnh kích thước ô lặp */
+    background-repeat: repeat;
+    background-size: 80px 48px;
+
+    /* animation giống moveStars của bạn */
+    animation: movePattern 0.25s linear infinite;
+    opacity: 0.95;
+    transform: translate3d(0,0,0);
+  }
+
+  @keyframes movePattern {
+    from { transform: translateY(0); }
+    to   { transform: translateY(-48px); } /* bằng chiều cao tile để tạo hiệu ứng cuộn liền mạch */
+  }
+
+  /* nội dung trang để dễ test */
+  .center {
+    height: 100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+</style>
+        <p id="re">Chính quyền sẽ cung cấp tài khoản cho bạn <br>Yêu cầu không lộn xộn</p>
+        <p><a href="index.html" style="position: relative;">Quay lại đăng nhập nè</a></p>
+        <style>
+            #re {
+                font-size: 30px;
+                color: rgb(5, 9, 14);
+            }
+        </style>
+    
+    </body>
+</html>
