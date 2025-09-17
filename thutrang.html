@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chữ chạy từ từ</title>
+  <style>
+    body {
+      background: #111;
+      color: #fff;
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+      display: flex;
+      align-items: flex-start;
+      height: 100vh;
+      padding: 20px;
+    }
+
+    .text {
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="text"></div>
+
+  <script>
+    const content = "Dear Nguyen Thu Trang \n Today is October 20th, as the best person. I would like to dedicate a song to you, either you chose it yourself on August 30th and you forgot, or I chose it for you. Anyway, I wish you a happy experience in the future \n\n\ I hope u like it :))) \n So...are you ready?"; 
+    const textDiv = document.querySelector('.text');
+    let i = 0;
+
+    function typeEffect() {
+      if (i < content.length) {
+        textDiv.textContent += content.charAt(i);
+        i++;
+        setTimeout(typeEffect, 30); // tốc độ gõ (100ms/1 ký tự)
+      }
+    }
+
+    typeEffect();
+  </script>
+
+</body>
+</html>
+
+
