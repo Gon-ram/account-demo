@@ -4,26 +4,55 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
+  margin: 0;
   height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+
+  /* Nền gradient */
+  background: linear-gradient(270deg, #ff512f, #dd2476, #24c6dc, #514a9d);
+  background-size: 800% 800%;
+
+  /* Hiệu ứng chuyển màu */
+  animation: gradientShift 15s ease infinite;
 }
+
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
 
 /* Khung container */
 .container {
   width: 320px;
   padding: 20px;
-  background: #222;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0,0,0,0.5);
-  text-align: center;
+  text-align: center !important;
   color: #fff;
 }
+
+.container {
+  /* Nền gradient */
+  background: linear-gradient(270deg, #ff512f, #dd2476, #24c6dc, #514a9d);
+  background-size: 800% 800%;
+
+  /* Hiệu ứng chuyển màu */
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
 
 /* Tiêu đề */
 .container h2 {
